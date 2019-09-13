@@ -1,0 +1,22 @@
+.anphabes-home {
+    width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    app-conten-left {
+        flex: 0 0 23%;
+        max-width: 23%;
+        // padding: 20px 15px 0 0;
+    }
+    app-conten-center {
+        flex: 0 0 49%;
+        max-width: 49%;
+        // padding: 20px;
+    }
+    app-conten-right {
+        flex: 0 0 28%;
+        max-width: 28%;
+        // padding: 20px 0 0 0;
+    }
+}

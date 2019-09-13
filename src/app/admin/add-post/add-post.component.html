@@ -1,0 +1,63 @@
+<div>
+    <form #frmUser="ngForm" (ngSubmit)="onSubmitForm(frmUser)">
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <input type="text" [(ngModel)] ="user.username" class="form-control" id="exampleInputEmail1" 
+          aria-describedby="emailHelp" 
+          minlength="3"
+          maxlength="20"
+          required="required"
+          name="txtUsername"
+          placeholder="Enter email" 
+          #username=ngModel
+          >
+          {{ username.errors | json }}
+        </div>
+        <span class="label label-danger" *ngIf="username.dirty && username.errors?.required">Vui lòng nhập</span>
+        <span class="label label-danger" *ngIf="username.dirty && username.errors?.minlength">Vui lòng nhập hon 3 ki tu</span>
+        <span class="label label-danger" *ngIf="username.dirty && username.errors?.maxlength">Vui lòng nhập 20 ki tu</span>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Password</label>
+          <input type="password" [(ngModel)] ="user.password" class="form-control" id="exampleInputEmail1" 
+          name="txtPassword"
+          aria-describedby="emailHelp" placeholder="Enter email" 
+          #password=ngModel
+          >
+        </div>
+        <span class="label label-danger" *ngIf="password.dirty && password.errors?.required">Vui lòng nhập</span>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">FullName</label>
+            <input type="text" [(ngModel)] ="user.fullname" class="form-control" id="exampleInputEmail1" 
+            name="txtFullname"
+            aria-describedby="emailHelp" placeholder="Enter email" 
+            #fullname=ngModel
+            >
+        </div>
+        <span class="label label-danger" *ngIf="fullname.dirty && fullname.errors?.required">Vui lòng nhập</span>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" [(ngModel)] ="user.email" class="form-control" id="exampleInputEmail1" 
+            name="txtEmail"
+            aria-describedby="emailHelp" placeholder="Enter email"
+            #email=ngModel
+            >
+        </div>
+        <span class="label label-danger" *ngIf="email.dirty && email.errors?.required">Vui lòng nhập</span>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">SDT</label>
+            <input type="text" [(ngModel)] ="user.phone" class="form-control" id="exampleInputEmail1" 
+            name="txtPhone"
+            aria-describedby="emailHelp" placeholder="Enter email" 
+            #phone=ngModel
+            >
+        </div>
+        <span class="label label-danger" *ngIf="phone.dirty && phone.errors?.required">Vui lòng nhập</span>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" (click)="onResetForm(frmUser)">Reset</button>
+      </form>
+</div>

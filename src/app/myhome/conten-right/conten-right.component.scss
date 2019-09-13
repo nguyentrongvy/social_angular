@@ -1,0 +1,131 @@
+.content-home__right {
+    // flex: 0 0 28%;
+    // max-width: 28%;
+    padding: 20px 0 0 0;
+    .title {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .border-home-right {
+        border: 3px solid #DC4E41;
+    }
+    .content-home__right__update-info {
+        .title {
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .update__info__person {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 3px;
+            .update__info__person__item {
+                padding: 9px 0;
+                .si-label__text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .home-profile {
+        background: #ffffff;
+        margin-top: 20px;
+        border-radius: 3px;
+        padding: 20px;
+        .title {
+            
+        }
+        .home-profile__content {
+            .home-profile__item {
+                padding: 9px 0;
+                display: flex;
+                .home-profile__item__title {
+                    display: flex;
+                    flex: 0 0 40%;
+                    .icon {
+                        margin-right: 5px;
+                        &--size {
+                            width: 16px;
+                            height: 16px;
+                            margin-top: 2px;
+                        }
+                    }
+                    .text {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+
+                .home-profile__item__content {
+                    flex: 0 0 60%;
+                    word-break: break-all;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .list-social {
+            display: flex;
+            flex-wrap: wrap;
+            .icon--size {
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .list-user-follow {
+        margin-top: 20px;
+        background: #ffffff;
+        border-radius: 3px;
+        padding: 20px 20px 20px 10px;
+        .title {
+
+        }
+        .list-user-follow__content {
+            .list-user-follow__content__item {
+                padding: 9px 0;
+                border-top: 1px solid #ccc;
+                .item__info {
+                    display: flex;
+                    align-items: center;
+                    .image {
+                        width: 45px;
+                        height: 45px;
+                        margin-right: 5px;
+                    }
+
+                    .info__content {
+                        p {
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    .action {
+                        margin-left: auto;
+
+                        button {
+                            background: #3B5998;
+                            border: none;
+                            color: #ffffff;
+                            border-radius: 4px;
+                            padding: 8px;
+                            display: flex;
+                            font-size: 10px;
+                            font-weight: bold;
+
+                            .icon-add-friend {
+                                width: 14px;
+                                height: 14px;
+                                margin-top: 3px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

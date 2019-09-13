@@ -1,0 +1,67 @@
+<div>
+    <form [formGroup]="frmUser" (ngSubmit)="onSubmitForm()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <input type="text"  class="form-control" id="exampleInputEmail1" 
+            aria-describedby="emailHelp" 
+            name="txtUsername"
+            formControlName="username"
+          >
+          <!-- <app-error-validate 
+            [control]="frmUser.controls.username"
+            [name-control]="username"
+            ></app-error-validate> -->
+          <!-- <span class="label label-danger" 
+            *ngIf="frmUser.controls.username.dirty && frmUser.controls.username.errors?.required">
+            Vui long nhap username
+          </span>
+          <span class="label label-danger" 
+            *ngIf="frmUser.controls.username.dirty && frmUser.controls.username.errors?.minlength">
+            Vui long nhap username hon 3 ki tu
+          </span>
+          <span class="label label-danger" 
+            *ngIf="frmUser.controls.username.dirty && frmUser.controls.username.errors?.maxlength">
+            Vui long nhap username nho hon 20 ki tu
+          </span> -->
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Password</label>
+          <input type="password" class="form-control" id="exampleInputEmail1" 
+          name="txtPassword"
+          aria-describedby="emailHelp" placeholder="Enter email" 
+          formControlName="password"
+          >
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">FullName</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" 
+            name="txtFullname"
+            aria-describedby="emailHelp" placeholder="Enter email" 
+            formControlName="fullname"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" 
+            name="txtEmail"
+            aria-describedby="emailHelp" placeholder="Enter email"
+            formControlName="email"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">SDT</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" 
+            name="txtPhone"
+            aria-describedby="emailHelp" placeholder="Enter email" 
+            formControlName="phone"
+            >
+          </div>
+
+        <button [disabled]="frmUser.invalid" type="submit" class="btn btn-primary">Submit</button>
+        <button (click)="onResetForm()" type="button" class="btn btn-primary">Reset</button>
+      </form>
+</div>
