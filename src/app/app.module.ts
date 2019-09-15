@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ContenLeftComponent } from './myhome/conten-left/conten-left.component';
@@ -13,6 +15,7 @@ import { AddPostReactiveFormComponent } from './admin/add-post-reactive-form/add
 import { ErrorValidateComponent } from './admin/error-validate/error-validate.component';
 import { HighlightDirective } from './highlight.directive';
 import { BookComponent } from './book/book/book.component';
+import { ListBookComponent } from './book/list-book/list-book.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +27,17 @@ import { BookComponent } from './book/book/book.component';
     AddPostReactiveFormComponent,
     ErrorValidateComponent,
     HighlightDirective,
-    BookComponent
+    BookComponent,
+    ListBookComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

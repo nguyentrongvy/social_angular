@@ -23,4 +23,9 @@ export class BookService {
     return this.http.post<Book>(this.bookURL, book, this.httpOptions).pipe(
     )
   }
+
+  listBook():Observable<Book[]> {
+    let url = `${AppConfig.ApiURL}/book`;
+    return this.http.get<Book[]>(url, this.httpOptions);
+  }
 }
