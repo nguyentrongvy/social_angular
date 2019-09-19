@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AppConfig } from '../configs/app.config';
 import { Book } from '../model/book.class';
-import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +24,12 @@ export class BookService {
     )
   }
 
-  listBook():Observable<Book[]> {
-    let url = `${AppConfig.ApiURL}/book`;
+  listBook(term : string):Observable<Book[]> {
+    let url = `${AppConfig.ApiURL}/book?search=${term}`;
+
+    // if(!term.trim()) {
+    //   return this.http.get<Book[]>(url, this.httpOptions);
+    // }
     return this.http.get<Book[]>(url, this.httpOptions);
   }
 }

@@ -16,6 +16,16 @@ import { ErrorValidateComponent } from './admin/error-validate/error-validate.co
 import { HighlightDirective } from './highlight.directive';
 import { BookComponent } from './book/book/book.component';
 import { ListBookComponent } from './book/list-book/list-book.component';
+import { SwaggerComponent } from './swagger/swagger/swagger.component';
+import { HeaderComponent } from './header/header/header.component';
+import { SlideComponent } from './slide/slide/slide.component';
+import { ListPostComponent } from './module/list-post/list-post.component';
+import { PostComponent } from './module/post/post.component';
+import { RegisterComponent } from './module/register/register.component';
+import { LoginComponent } from './module/login/login.component';
+import { ProfileComponent } from './module/profile/profile.component';
+import { CreatePostComponent } from './module/create-post/create-post.component';
+import { TodosModule } from './todos/todos.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +38,16 @@ import { ListBookComponent } from './book/list-book/list-book.component';
     ErrorValidateComponent,
     HighlightDirective,
     BookComponent,
-    ListBookComponent
+    ListBookComponent,
+    SwaggerComponent,
+    HeaderComponent,
+    SlideComponent,
+    ListPostComponent,
+    PostComponent,
+    RegisterComponent,
+    LoginComponent,
+    ProfileComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +57,7 @@ import { ListBookComponent } from './book/list-book/list-book.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    TodosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

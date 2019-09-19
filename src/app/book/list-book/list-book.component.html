@@ -1,6 +1,13 @@
 <div class="container list-book">
   <div class="form-group">
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="text" 
+    class="form-control" 
+    id="exampleInputEmail1" 
+    aria-describedby="emailHelp" 
+    placeholder="Enter email"
+    (ngModelChange)="onChange($event)"
+    [(ngModel)]="search1"
+    />
   </div>
   <table class="table table-striped">
     <thead>

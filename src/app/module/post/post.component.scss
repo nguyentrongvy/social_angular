@@ -1,0 +1,38 @@
+#list-post {
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    .list-post {
+        display: flex;
+        flex-wrap: wrap;
+
+        .list-post__item {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            .image {
+                img {
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+            .action {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 5px;
+                .like {
+
+                }
+                .share {
+
+                }
+                .comment {
+
+                }
+            }
+        }
+    }
+}
